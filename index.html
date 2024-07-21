@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieNest</title>
+    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+</head>
+<body>
+    <!-- Loading element -->
+    <div class="loading loading-overlay">
+        <i class="fas loading fa-spinner fa-spin fa-3x text-white"></i>
+        </div>
+
+    <nav class="position-fixed top-0 start-0 vh-100 text-center">
+        <div class="nav-logo">
+            <a href="./index.html">
+                <img src="./images/logo.jpg" class="img-thumbnail" alt="">
+            </a> 
+        </div>
+        <div id="nav-menu" class="nav-menu">
+            <i class="fa-solid fa-align-justify"></i>
+        </div>
+        <div class="nav-social">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </nav>
+    <div id="side-nav" class="side-nav position-fixed top-0 start-0 vh-100">
+        <div id="close-nav" class="close-nav">
+            <i class="fa-solid fa-times"></i>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a class="category" data-category="now_playing" attr="nowPlaying">Now playing</a></li>
+                <li><a class="category" data-category="popular" attr="popular">Popular</a></li>
+                <li><a class="category" data-category="top_rated" attr="topRated">Top Rated</a></li>
+                <li><a class="category" data-category="trending/movie/day" attr="trending">Trending</a></li>
+                <li><a class="category" data-category="upcoming" attr="upcoming">Upcoming</a></li>
+                <li><a href="#contact" section="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="copyrights">
+            <div class="rights-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+            </div>
+            <p class="pt-3">Copyright © 2024 All Rights Reserved. <br>Created by <a href="https://github.com/Gamalsobhy585/" class="link-danger fw-bold" target="_blank"><br>Gamal Sobhy</a></p>
+        </div>
+    </div>
+
+    <section class="container py-5">
+        <input class="form-control w-50 mx-auto bg-transparent rounded-pill text-white shadow-none border-white px-3" type="search" placeholder="Search" id="search-input">
+        <div class="row mt-3 text-white">
+        </div>
+    </section>
+    <section id="contact" class="container text-white py-5">
+        <h2>Contact US</h2>
+        <form autocomplete="off">
+            <div class="row g-4 text-white mt-3">
+                <div class="col-md-6">
+                    <input oninput="validateUserMessage('name')" type="text" required="" id="name" maxlength="37" class="form-control mt-4" placeholder="Enter Your Name">
+                    <span class="error mt-3 d-block" id="nameError"></span>
+                </div>
+                <div class="col-md-6">
+                    <input oninput="validateUserMessage('email')" type="email" required="" id="email" class="form-control mt-4" placeholder="Enter Your Email">
+                    <span class="error mt-3 d-block" id="emailError"></span>
+                </div>
+                <div class="col-md-6">
+                    <input oninput="validateUserMessage('phone')" type="text" required="" id="phone" class="form-control mt-4" placeholder="Enter Your Phone">
+                    <span class="error mt-3 d-block" id="phoneError"></span>
+                </div>
+                <div class="col-md-6">
+                    <input oninput="validateUserMessage('age')" type="number" required="" id="age" class="form-control mt-4" placeholder="Enter Your Age">
+                    <span class="error mt-3 d-block" id="ageError"></span>
+                </div>
+                <div class="col-md-12">
+                    <textarea oninput="validateUserMessage('message')" name="message" required minlength="10" maxlength="500" placeholder="Your message" rows="10" id="message" class="form-control mt-4"></textarea>
+                    <span class="error mt-3 d-block" id="messageError"></span>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <button id="registerBtn" type="submit" class="btn rounded-2 mb-3 btn-outline-light animate__animated">Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+  
+</body>
+</html>

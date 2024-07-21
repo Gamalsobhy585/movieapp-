@@ -1,0 +1,585 @@
+body {
+    background-color: #0D0D0D;
+}
+
+
+
+
+
+.cardImage {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.3125rem;
+    
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.25rem;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .title {
+    font-weight: 700;
+    text-align: center;
+    user-select: text;
+}
+.overlay .popularity{
+    font-weight: 400;
+    text-align: left;
+    user-select: text;
+    color: white;
+    font-size:0.75rem ;
+}
+
+.overlay .desc {
+    color: #EDEDED;
+    user-select: text;
+    line-height: 1.6;
+}
+
+.overlay .date {
+    font-style: italic;
+}
+
+.overlay .vote {
+    font-size: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.125rem solid green;
+    padding: 0.625rem;
+    border-radius: 50%;
+}
+
+.overlay .stars {
+    font-size: 1.25rem;
+    color: gold;
+    
+    margin-top: 0.625rem;
+}
+.cardImage 
+{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    -ms-border-radius: 0.3125rem;
+    -o-border-radius: 0.3125rem;
+}
+.cardImage img
+{
+   transition: all 0.5s ease-in-out;
+   -webkit-transition: all 0.5s ease-in-out;
+   -moz-transition: all 0.5s ease-in-out;
+   -ms-transition: all 0.5s ease-in-out;
+   -o-transition: all 0.5s ease-in-out;
+}
+.item:hover img
+{
+    transform: rotate(5deg) scale(1.25);
+    -webkit-transform: rotate(5deg) scale(1.25);
+    -moz-transform: rotate(5deg) scale(1.25);
+    -ms-transform: rotate(5deg) scale(1.25);
+    -o-transform: rotate(5deg) scale(1.25);
+    filter: blur(0.1875rem);
+    -webkit-filter: blur(0.1875rem);
+}
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .title,
+.overlay .desc,
+.overlay .date,
+.overlay .vote,
+.overlay .popularity {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-weight: 400;
+}
+.item:hover .title,
+.item:hover .desc,
+.item:hover .date,
+.item:hover .vote,
+.overlay .popularity {
+    opacity: 1;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    font-weight: 400;
+}
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes flipInX {
+    0% {
+    -webkit-transform: perspective(25rem) rotateX(90deg);
+    transform: perspective(25rem) rotateX(90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+}
+40% {
+    -webkit-transform: perspective(25rem) rotateX(-20deg);
+    transform: perspective(25rem) rotateX(-20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+60% {
+    -webkit-transform: perspective(25rem) rotateX(10deg);
+    transform: perspective(25rem) rotateX(10deg);
+    opacity: 1;
+}
+80% {
+    -webkit-transform: perspective(25rem) rotateX(-5deg);
+    transform: perspective(25rem) rotateX(-5deg);
+}
+to {
+    -webkit-transform: perspective(25rem);
+    transform: perspective(25rem);
+}
+}@keyframes flipInX {
+    0% {
+    -webkit-transform: perspective(25rem) rotateX(90deg);
+    transform: perspective(25rem) rotateX(90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+}
+40% {
+    -webkit-transform: perspective(25rem) rotateX(-20deg);
+    transform: perspective(25rem) rotateX(-20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+60% {
+    -webkit-transform: perspective(25rem) rotateX(10deg);
+    transform: perspective(25rem) rotateX(10deg);
+    opacity: 1;
+}
+80% {
+    -webkit-transform: perspective(25rem) rotateX(-5deg);
+    transform: perspective(25rem) rotateX(-5deg);
+}
+to {
+    -webkit-transform: perspective(25rem);
+    transform: perspective(25rem);
+}
+}.animate__flipInX {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}@keyframes fadeIn {
+    0% {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+@-webkit-keyframes slideOutLeft {
+    0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+}@keyframes slideOutLeft {
+    0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+}.animate__slideOutLeft {
+    -webkit-animation-name: slideOutLeft;
+    animation-name: slideOutLeft;
+}
+@-webkit-keyframes slideOutRight {
+    0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+}@keyframes slideOutRight {
+    0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+}.animate__slideOutRight {
+    -webkit-animation-name: slideOutRight;
+    animation-name: slideOutRight;
+}
+@media (prefers-reduced-motion:reduce), print {
+    .animate__animated {
+    -webkit-animation-duration: 1ms!important;
+    animation-duration: 1ms!important;
+    -webkit-transition-duration: 1ms!important;
+    transition-duration: 1ms!important;
+    -webkit-animation-iteration-count: 1!important;
+    animation-iteration-count: 1!important;
+}
+.animate__animated[class*=Out] {
+    opacity: 0;
+}}
+::selection {
+    color: white; 
+    background: #333; 
+}
+
+
+::-webkit-selection {
+    color: white;
+    background: #333;
+}
+.w-5{
+width: 5%;
+}
+nav
+{
+    width: 3.75rem;
+    background-color: #f8f6f6;
+    z-index: 999999;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+nav .nav-logo
+{
+    padding: 1.5625rem 0;
+}
+nav .nav-logo img
+{
+    height: 3rem;
+    user-select: none;
+}
+nav .nav-menu
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+nav .nav-menu i 
+{
+    font-size: 1.5625rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+nav .nav-social
+{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.nav-social i
+{
+    margin-top: 0.3125rem;
+    cursor: pointer;
+}
+
+.side-nav {
+    background-color: #000;
+    width: 15.625rem;
+    z-index: 99999;
+    padding: 0 1.875rem;
+    margin-left: -15.625rem;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.side-nav.active {
+    margin-left: 0;
+}
+
+.close-nav {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.menu ul
+{
+    margin: 0.625rem;
+    overflow: hidden;
+    height: 18.75rem;
+}
+.menu ul li{
+    margin-bottom: 1.25rem;
+}
+.menu ul li a
+{
+    color: #f9f6f6!important;
+    font-weight: 300;
+    cursor: pointer;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.menu ul li a:hover
+{
+    color: #ff655c!important;
+}
+.copyrights
+{
+    position: absolute;
+    bottom: 1.875rem;
+    left: 1.875rem;
+    padding: 1.25rem;
+    margin: 1.25rem;
+}
+.copyrights p
+{
+    color: rgb(153, 153, 153)!important;
+}
+.rights-social a
+{
+    color: #f9f6f6;
+    padding-left: 0.9375rem;
+    font-size: 0.875rem;
+}
+@media (max-width:37.4375rem) 
+{
+    nav
+    {
+        background-color: transparent;
+    }
+    nav .nav-logo , nav .nav-social
+    {
+       opacity: 0;
+    }
+    nav .nav-menu i 
+    {   
+        color: #fff;
+    }
+    #search
+    {
+        width: 75%!important;
+    }
+}
+@media (min-width: 37.5rem) and (max-width:47.9375rem) 
+{
+    nav
+    {
+        background-color: transparent;
+    }
+    nav .nav-logo , nav .nav-social
+    {
+       opacity: 0;
+    }
+    nav .nav-menu i 
+    {
+        color: #fff;
+    }
+    #search
+    {
+        width: 75%!important;
+    }
+}
+@media (min-width: 48rem) and (max-width:61.9375rem) {
+    nav
+    {
+        background-color: transparent;
+    }
+    nav .nav-logo , nav .nav-social
+    {
+       opacity: 0;
+    }
+    nav .nav-menu i 
+    {
+        color: #fff;
+    }
+    #search
+    {
+        width: 75%!important;
+    }
+    .overlay .title
+    {
+       font-size: 1.5625rem;
+    }
+    
+}
+@media (min-width: 62rem) and (max-width:74.9375rem) {
+    .overlay .title
+    {
+       font-size: 1.375rem;
+    }
+    .overlay .desc
+    {
+       font-size: 0.875rem;
+    }
+    .overlay .date
+    {
+       margin-bottom: 0rem;
+    }
+}
+a{
+    text-decoration: none;
+}
+.form-control{
+    background-color: transparent;
+border-color: transparent;
+border-bottom: 0.0625rem solid white;
+border-radius: 0;
+}
+.showPass i{
+    position: absolute;
+    right: 2%;
+    top: 50%;
+
+}
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover, 
+.form-control:-webkit-autofill:focus, 
+.form-control:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color:transparent !important;}
+  input{
+    background-color: transparent;
+  }
+  .form-control:focus {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control:focus::placeholder {
+    color: white; 
+}
+
+.form-control[type="text"]:focus,
+.form-control[type="email"]:focus,
+.form-control[type="number"]:focus,
+.form-control[type="password"]:focus {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 0.0625rem solid white;
+    color: white;
+}
+
+.form-control[type="text"]:focus::placeholder,
+.form-control[type="email"]:focus::placeholder,
+.form-control[type="number"]:focus::placeholder,
+.form-control[type="password"]:focus::placeholder {
+    color: white; 
+
+}
+.form-control[type="text"]:-webkit-autofill,
+.form-control[type="email"]:-webkit-autofill,
+.form-control[type="number"]:-webkit-autofill,
+.form-control[type="password"]:-webkit-autofill {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 0.0625rem solid white;
+    color: white !important;
+
+}
+.form-control{
+    color: white !important;
+
+
+}
+#message
+{
+background-color: transparent;
+color: white;
+}
+.error{
+color: red;
+}
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 5s;
+    opacity: 1;
+
+}
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 5s;
+  }
